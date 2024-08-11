@@ -34,10 +34,13 @@ DArray::~DArray() {
 
 // display the elements of the array
 void DArray::Print() const {
-	cout << "size = " << m_nSize << ":";
+	cout << endl;
+	cout << "=== Pint function ===" << this << endl;
+	cout << "this ptr is " << this << endl;
+	cout << "size is " << m_nSize << endl;
+	cout << "value is: ";
 	for (int i = 0; i < m_nSize; i++)
-		cout << " " << GetAt(i);
-
+		cout << m_pData[i] << ", ";
 	cout << endl;
 }
 

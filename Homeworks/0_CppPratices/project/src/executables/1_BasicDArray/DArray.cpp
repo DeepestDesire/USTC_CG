@@ -152,10 +152,10 @@ void DArray::InsertAt(int nIndex, double dValue) {
 // overload operator '='
 DArray& DArray::operator = (const DArray& arr) {
 
-	Free();
+	delete[] m_pData;
 
 	m_nSize = arr.m_nSize;
-	m_pData = new double(arr.m_nSize);
+	m_pData = new double[arr.m_nSize];
 	for (int i = 0; i < arr.m_nSize; i++)
 		m_pData[i] = arr.m_pData[i];
 
